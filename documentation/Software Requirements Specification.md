@@ -247,7 +247,7 @@ This mode is intended for viewing and editing the cars list
 * In the car list view mode, the user sets the cost filter and clicks the refresh list button (to the right of the cost entry field );
 * The application will display a form for viewing a list of cars with updated data.
 
-###3.2 Add car
+### 3.2 Add car
 
 ***Main scenario:***
 * User clicks the “Add” button in the cars list view mode; 
