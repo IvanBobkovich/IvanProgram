@@ -33,8 +33,8 @@ The mode is designed to view the list of orders, if it possible to display the n
 <br>Pic. 1.1 View the Orders list.
 
 The list displays the following columns:
-* Car number – unique car number;
 * Client  –  customer data;
+* Car - information about the car
 * Price – the total price of the car;
 * Add date – the date the order was added;
 
@@ -65,9 +65,9 @@ The list displays the following columns:
 <br>Pic. 1.2 Add order.
 
 ***When adding a order, the following details are entered:***
-* Client  – client’s first and last name;
-* Car  – car description;
-* Price – the total price of the car;
+* Client  – client data is stored in another table;
+* Car  – car data is stored in another table;
+* Price – filled in automatically when choosing a car;
 * Add date – date of adding order;
 
 ### 1.3 Edit order.
@@ -92,15 +92,15 @@ The list displays the following columns:
 <br>Pic. 1.3 Edit order.
 
 ***When editing a order, the following details are entered:***
-* Client  – client’s first and last name;
-* Car  – car description;
-* Price – the total price of the car;
+* Client  – client data is stored in another table;
+* Car  – car data is stored in another table;
+* Price – filled in automatically when choosing a car;
 * Add date – date of adding order;
 
 ***Constraints for data validation:***
-* Client  – maximum length of 90 characters; 
-* Car  – maximum length of 90 characters;
-* Price – maximum length of 90 characters;
+* Client  – client data is stored in another table; 
+* Car  – car data is stored in another table;
+* Price – numeric field of maximum length 45;
 * Add date – order add date in format dd/mm/yyyy.
 
 ### 1.4 Removing the order
@@ -117,7 +117,7 @@ The list displays the following columns:
 ![](delete_order.PNG)
 <br>Pic. 1.4 Delete order dialog.
 
-***Cancel operation scenario:****
+***Cancel operation scenario:***
 * User is in display mode of orders list and press “Delete” button; 
 * Application displays confirmation dialog “Please confirm delete order?”; 
 * User press “Cancel” button; 
@@ -212,7 +212,7 @@ Constraints for data validation:
 * The user confirms the removal of the client; 
 * Record is deleted from database; 
 * If error occurs, then error message displays; 
-* If client record is successfully deleted, then list of clients without deleted records is displaying.
+* When a client is deleted, a confirmation window appears, and the row in the table of this client turns red. The data in the other tables does not change;
 
 ![](delete_client.PNG)
 <br>Pic. 2.4 Delete client dialog.
@@ -228,7 +228,7 @@ Constraints for data validation:
 ## 3.  Cars
 
 ### 3.1 Display list of cars
-This mode is intended for viewing and editing the cars list
+This mode is intended for viewing and editing the cars list.
 ***Main scenario:***
 * User selects item “Cars”; 
 * Application displays list of cars.
@@ -237,9 +237,10 @@ This mode is intended for viewing and editing the cars list
 ![](Cars.PNG)
 <br>Pic. 3.1 View the cars list.
 
-* Marka  –  marka car; 
+* Brand  –  brand car; 
 * Model - car model;
-* Cost - the cost of the car;
+* Price - the price of the car;
+* VIN - Vehicle identification number;
 * Year of release - the year of the car 's release
 * Color - the color of the car
 
@@ -271,17 +272,19 @@ This mode is intended for viewing and editing the cars list
 
 When adding a car, the following details are entered:
 
-* Marka - car marka;
+* Brand - car brand;
 * Model - car model;
-* Cost - the cost of the car;
+* Price - the price of the car;
+* VIN - Vehicle identification number;
 * Year of release - the year of the car 's release
 * Color - the color of the car
 
 Constraints for data validation:
 
-* Marka - maximum length of 45 character;
+* Brand - maximum length of 45 character;
 * Model - maximum length of 45 character;
-* Cost - maximum length of 45 character;
+* Price - numeric field maximum length 45;
+* VIN - maximum length of 45 character;
 * Year of release - date of creation in the format dd/mm/yyyy.
 * Color - maximum length of 45 character;
 
@@ -318,8 +321,7 @@ If the user selects the menu item "Orders”, ”Clients” or "Cars", the data 
 * The user confirms the removal of the machine;
 * The record has been deleted from the database;
 * When an error occurs, an error message is displayed;
-* If the client record is successfully deleted, a list of machines without deleted records is displayed.
-
+* When deleting a machine, a confirmation window appears and the row in the machine table turns red. The data in the other tables does not change;
 ***Operation cancellation scenario:***
 * The user is in the display mode of the list of machines and presses the "Delete" button.;
 * The application displays a confirmation dialog box "Please confirm the removal of machines?”;
