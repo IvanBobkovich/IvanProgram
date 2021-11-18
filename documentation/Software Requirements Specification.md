@@ -7,16 +7,16 @@
 
 Application should provide:
 
-* Storing purchase orders, customers and cars in a database;;
+* Storing purchase orders, customers and cars in a database;
 * Display list of orders;
-* Updating the list of orders (adding, editing, removing); ;
+* Updating the list of orders (adding, editing, removing);
 * Display list of clients;
-* Updating the list of clients (adding, editing, removing);;
+* Updating the list of clients (adding, editing, removing);
 * Display list of cars;
 * Updating the list of cars (adding, editing, removing);
-* Display number of the orders for cars; ;
-* Filtering by date orders;;
-* Filtering by cost for cars.;
+* Display number of the orders for cars;
+* Filtering by date orders;
+* Filtering by cost for cars.
 <!--/VISION-->
 
 <!--ORDERS-->
@@ -37,7 +37,7 @@ The list displays the following columns:
 * Car - information about the car;
 * Client  –  customer data;
 * Price – the total price of the car;
-* Add date – the date the order was added;
+* Add date – the date the order was added.
 
 
 ***Filtering by date:***
@@ -70,7 +70,7 @@ The list displays the following columns:
 * Car  – car data is stored in another table;
 * Client  – client data is stored in another table;
 * Price – filled in automatically when choosing a car;
-* Add date – date of adding order;
+* Add date – date of adding order.
 
 ### 1.3 Edit order.
 
@@ -98,7 +98,7 @@ The list displays the following columns:
 * Car  – car data is stored in another table;
 * Client  – client data is stored in another table;
 * Price – filled in automatically when choosing a car;
-* Add date – date of adding order;
+* Add date – date of adding order.
 
 ***Constraints for data validation:***
 * VIN - maximum length of 45 character;
@@ -146,7 +146,7 @@ The list displays the following columns:
 * First name – client’s first name; 
 * Phone - the client's phone number;
 * Registration date – client’s date registration; 
-* Passport number – the unique number of the client's passport;
+* Passport number – the unique number of the client's passport.
 
 
 ***Filtering by date:***
@@ -180,14 +180,14 @@ When adding a client, the following details are entered:
 * First name – client’s first name; 
 * Phone - the client's phone number;
 * Registration date – client’s date registration; 
-* Passport number – the unique number of the client's passport;
+* Passport number – the unique number of the client's passport.
 
 Constraints for data validation:
 * Last name – maximum length of 45 characters; 
 * First name –  maximum length of 45 characters; 
 * Phone –  maximum length of 30 characters; 
-* Registration date – client’s registration date in format dd/mm/yyyy
-* Passport number - maximum length of 45 characters;
+* Registration date – client’s registration date in format dd/mm/yyyy;
+* Passport number - maximum length of 45 characters.
 
 ### 2.3 Edit client
 ***Main scenario:***
@@ -203,7 +203,7 @@ Constraints for data validation:
 * User clicks the “Edit” button in the clients list view mode; 
 * Application displays form to enter client data; 
 * User enters client data and presses “Cancel” button; 
-* Data don’t save in data base, then list of clients records is displaying to user. 
+* Data don’t save in data base, then list of clients records is displaying to user;
 * If the user selects the menu item "Orders”, ”Clients” or "Cars", the data will not be saved to the database and the corresponding form with updated data will be opened.
 
 
@@ -216,7 +216,7 @@ Constraints for data validation:
 * The user confirms the removal of the client; 
 * Record is deleted from database; 
 * If error occurs, then error message displays; 
-* When a client is deleted, a confirmation window appears, and the row in the table of this client turns red. The data in the other tables does not change;
+* When a client is deleted, a confirmation window appears, and the row in the table of this client turns red. The data in the other tables does not change.
 
 ![](delete_client.PNG)
 <br>Pic. 2.4 Delete client dialog.
@@ -246,7 +246,7 @@ This mode is intended for viewing and editing the cars list.
 * Price - the price of the car;
 * Year of release - the year of the car 's release;
 * Color - the color of the car;
-* Quantity - the number of cars;
+* Quantity - the number of cars.
 
 ***Filtering by cost:***
 * In the car list view mode, the user sets the cost filter and clicks the refresh list button (to the right of the cost entry field );
@@ -267,7 +267,7 @@ This mode is intended for viewing and editing the cars list.
 * User clicks the “Add” button in the cars list view mode; 
 * Application displays form to enter car data; 
 * User enters car data and presses “Cancel” button;
-* Data don’t save in data base, then list of cars records is displaying to user. 
+* Data don’t save in data base, then list of cars records is displaying to user;
 * If the user selects the menu item "Orders”, ”Clients” or "Cars", the data will not be saved to the database and the corresponding form with updated data will be opened.
 
 
@@ -281,7 +281,7 @@ When adding a car, the following details are entered:
 * Price - the price of the car;
 * Year of release - the year of the car 's release;
 * Color - the color of the car;
-* Quantity - the number of cars;
+* Quantity - the number of cars.
 
 Constraints for data validation:
 
@@ -290,7 +290,7 @@ Constraints for data validation:
 * Price - numeric field maximum length 45;
 * Year of release - date of creation in the format dd/mm/yyyy.;
 * Color - maximum length of 45 character;
-* Quantity - numeric field maximum length 45;
+* Quantity - numeric field maximum length 45.
 
 
 ### 3.3 Edit car
@@ -321,13 +321,13 @@ If the user selects the menu item "Orders”, ”Clients” or "Cars", the data 
 ***Main scenario:***
 
 * The user, being in the list of machines mode, presses the "Delete" button in the selected row of machines;
-* The application displays a confirmation dialog box "Please confirm the removal of the machine ?”;”;
+* The application displays a confirmation dialog box "Please confirm the removal of the machine ?”;
 * The user confirms the removal of the machine;
 * The record has been deleted from the database;
 * When an error occurs, an error message is displayed;
 * When deleting a machine, a confirmation window appears and the row in the machine table turns red. The data in the other tables does not change;
 ***Operation cancellation scenario:***
-* The user is in the display mode of the list of machines and presses the "Delete" button.;
+* The user is in the display mode of the list of machines and presses the "Delete" button;
 * The application displays a confirmation dialog box "Please confirm the removal of machines?”;
 * The user clicks the "Cancel" button; 
 * The list of machines is displayed unchanged.
