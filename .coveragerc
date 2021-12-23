@@ -1,0 +1,2 @@
+[run]
+omit = */migrations/*, dealership/manage.py, dealership/setup.py, */wsgi.py, */asgi.py
